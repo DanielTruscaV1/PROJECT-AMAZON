@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                margin:0px;
+            }
+            header
+            {
+                width:100%;
+                height:200px;
+                background-color:rgb(235, 235, 235);
+                font-family: 'Montserrat', sans-serif;
+                margin-top:-20px;
+            }
+            #title
+            {
+                padding-top:30px;
+                padding-left:30px;
+            }
+            #subtitle
+            {
+                padding-top:30px;
+                padding-left:30px;
+            }
+            #theme
+            {
+                width:60px;
+                height:60px;
+                border-radius:30px;
+                border:none;
+                cursor:pointer;
+                font-family: 'Montserrat', sans-serif;
+                font-size:20px;
+                position:absolute;
+                top:30px;
+                left:90%;
+                color:white;
+                background-color:black;
+            }
+            .choice
+            {
+                width:33%;
+                height:600px;
+                display:inline-block;
+                font-family: 'Montserrat', sans-serif;
+                font-size:20px;
+                color:white;
+            }
+            .choice h3
+            {
+                text-align:center;
+            }
+            #facts
+            {
+                background-color:rgb(160, 130, 130);
+            }
+            #facts:hover
+            {
+                background-color:rgb(220, 130, 130);
+                cursor:pointer;
+            }
+            #quiz
+            {
+                background-color:rgb(130, 160, 130);
+            }
+            #quiz:hover
+            {
+                background-color:rgb(130, 220, 130);
+                cursor:pointer;
+            }
+            #map
+            {
+                background-color:rgb(130, 130, 160);
+            }
+            #map:hover
+            {
+                background-color:rgb(130, 130, 220);
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body onload="typeAnimation()">
+        <header>
+            <h1 id="title">
+
+            </h1>
+            <h3 id="subtitle">
+
+            </h3>
+            <button id="theme">
+                Dark
+            </button>
+        </header>
+        <main>
+            <section class="choice" id="facts">
+                <h3>
+                    Facts
+                </h3>
+            </section>
+            <section class="choice" id="quiz">
+                <h3>
+                    Quiz
+                </h3>
+            </section>
+            <section class="choice" id="map">
+                <h3>
+                    Map
+                </h3>
+            </section>
+        </main>
+        <script>
+            var i = 0;
+            var j = 0;
+            var text1 = "The Amazon rainforest";
+            var text2 = "Here you can find the most interesting facts about the Amazon rainforest along with a general quiz and even an interactive map";
+            var speed = 50;
+
+            function typeAnimation()
+            {
+                if (i < text1.length) 
+                {
+                    document.getElementById("title").innerHTML += text1.charAt(i);
+                    i++;
+                    setTimeout(typeAnimation, speed);
+                }
+                else if(j < text2.length) 
+                {
+                    document.getElementById("subtitle").innerHTML += text2.charAt(j);
+                    j++;
+                    setTimeout(typeAnimation, speed);
+                }
+            }
+        </script>
+    </body>
+</html>
