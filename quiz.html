@@ -124,19 +124,19 @@
 
             </h1>
         </section>
-        <button class="choicea" id="choicea" onclick="check()">
+        <button class="choicea" id="choicea" onclick="checka()">
 
         </button>
         <br/>
-        <button class="choiceb" id="choiceb" onclick="check()">
+        <button class="choiceb" id="choiceb" onclick="checkb()">
             
         </button>
         <br/>
-        <button class="choicec" id="choicec" onclick="check()">
+        <button class="choicec" id="choicec" onclick="checkc()">
             
         </button>
         <br/>
-        <button class="choiced" id="choiced" onclick="check()">
+        <button class="choiced" id="choiced" onclick="checkd()">
             
         </button>
         <button class="next" onclick="next()">
@@ -147,7 +147,7 @@
             var intrebare1 = {
                 numar: 1,
                 text:"In which of these countries can the Amazon rainforest be found?",
-                raspunsuri: ["Argenitina", "Brazil", "Chile", "Honduras"]
+                raspunsuri: ["Argentina", "Brazil", "Chile", "Honduras"]
             };
             var intrebare2 = {
                 numar: 2,
@@ -358,6 +358,9 @@
                     }, 100);
                 }
             }
+
+            var goodAns = 0;
+            var questionW1 = 0, questionW2 = 0, questionW3 = 0, questionW4 = 0, questionW5 = 0;
             function next()
             {
                 raspunsA.style.backgroundColor = `rgb(240, 240, 240)`;
@@ -532,11 +535,20 @@
                         }
                     }, 100);
                 }
+                else if (i == 5)
+                {
+                    i = 6;
+                    intrebare.innerHTML = "Congratulations !" +  "<br />" +  "You scored: " + goodAns + "/5 !" + "<br />" + "Here is a better overview of your answers: " +  "<br />";
+                    console.log(goodAns + " " + questionW1 + " " + questionW2 + " " + questionW3 + " " + questionW4 + " " + questionW5);
+                }
             }
-            function check()
+
+            
+            function checka()
             {
                 if(i == 1)
                 {
+                    questionW1 = 1;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -577,6 +589,7 @@
                 }
                 else if(i == 2)
                 {
+                    questionW2 = 1;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -617,6 +630,7 @@
                 }
                 else if(i == 3)
                 {
+                    questionW3 = 1;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -657,6 +671,7 @@
                 }
                 else if(i == 4)
                 {
+                    questionW4 = 1;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -697,6 +712,634 @@
                 }
                 else if(i == 5)
                 {
+                    goodAns++;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsA.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+            }
+
+            function checkb()
+            {
+                if(i == 1)
+                {
+                    goodAns++;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 2)
+                {
+                    questionW2 = 2;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 3)
+                {
+                    goodAns++;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 4)
+                {
+                    questionW4 = 2;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 5)
+                {
+                    questionW5 = 2;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsA.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+            }
+
+            function checkc()
+            {
+                if(i == 1)
+                {
+                    questionW1 = 3;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 2)
+                {
+                    goodAns++;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 3)
+                {
+                    questionW3 = 3;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 4)
+                {
+                    questionW4 = 3;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 5)
+                {
+                    questionW5 = 3;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsA.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+            }
+
+            function checkd()
+            {
+                if(i == 1)
+                {
+                    questionW1 = 4;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 2)
+                {
+                    questionW2 = 4;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 3)
+                {
+                    questionW3 = 4;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 4)
+                {
+                    goodAns++;
+                    var x = 10;
+                    var phase1 = true;
+                    var k = window.setInterval(function() {
+                        if(x == -1)
+                        {
+                            phase1 = false;
+                            x++;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == true)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(240, 240, 240, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(170, 170, 170, ${x/10})`;
+                            x -= 1;
+                        }
+                        else if(x >= 0 && x <= 10 && phase1 == false)
+                        {
+                            raspunsA.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsD.style.backgroundColor = `rgba(150, 200, 150, ${x/10}`;
+                            raspunsC.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsB.style.backgroundColor = `rgba(200, 150, 150, ${x/10}`;
+                            raspunsA.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsD.style.border = `3px solid rgba(100, 200, 100, ${x/10})`;
+                            raspunsC.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            raspunsB.style.border = `3px solid rgba(200, 100, 100, ${x/10})`;
+                            x += 1;
+                        }
+                        else if(x >= 11)
+                        {
+                            clearInterval(k);
+                        }
+                    }, 100);
+                }
+                else if(i == 5)
+                {
+                    questionW5 = 4;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
