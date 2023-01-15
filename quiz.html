@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="ro">
         <title>
             Quiz
         </title>
+        <meta charset="UTF-8">
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <style>
+            body {
+            background-image: url('images/image10.jpg');
+            background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-color: black;
+            }
             button
             {
                 cursor:pointer;
             }
+            .previous:hover {
+            border: 3px solid white;
+            color: white;
+            }
+            .next:hover {
+            border: 3px solid white;
+            color: white;
+            }
+
             .question
             {
                 width:50%;
-                height:350px;
-                padding:10px;
+                height:150px;
                 border:3px solid black;
                 border-radius:30px;
                 box-shadow: 10px 10px 10px black;
                 font-family: 'Montserrat', sans-serif;
                 position:absolute;
                 left:25%;
+                background-image: url('images/papers.jpg');
+                background-repeat: no-repeat;
+			background-size: cover;
+                margin-top: 80px;
             }
             .choicea
             {
                 width:50%;
                 height:50px;
                 position:absolute;
-                top:415px;
-                left:26%;
+                top:280px;
+                left:25%;
                 background-color:rgb(240, 240, 240);
                 border:3px solid rgb(170, 170, 170);
                 border-radius:20px;
@@ -41,8 +61,8 @@
                 width:50%;
                 height:50px;
                 position:absolute;
-                top:505px;
-                left:26%;
+                top:350px;
+                left:25%;
                 background-color:rgb(240, 240, 240);
                 border:3px solid rgb(170, 170, 170);
                 border-radius:20px;
@@ -54,8 +74,8 @@
                 width:50%;
                 height:50px;
                 position:absolute;
-                top:595px;
-                left:26%;
+                top:420px;
+                left:25%;
                 background-color:rgb(240, 240, 240);
                 border:3px solid rgb(170, 170, 170);
                 border-radius:20px;
@@ -67,8 +87,8 @@
                 width:50%;
                 height:50px;
                 position:absolute;
-                top:685px;
-                left:26%;
+                top:490px;
+                left:25%;
                 background-color:rgb(240, 240, 240);
                 border:3px solid rgb(170, 170, 170);
                 border-radius:20px;
@@ -79,25 +99,26 @@
             {
                 font-size:30px;
                 position:absolute;
-                top:160px;
+                top:130px;
                 left:160px;
-                width:80px;
-                height:80px;
+                width:70px;
+                height:70px;
                 border-radius:40px;
                 border:none;
-                background-color:rgb(170, 170, 250);
+                background: linear-gradient(0deg, rgba(34,88,66,1) 0%, rgba(73,176,15,1) 48%, rgba(186,255,0,1) 100%);
+
             }
             .next
             {
                 font-size:30px;
                 position:absolute;
-                top:160px;
+                top:130px;
                 right:160px;
-                width:80px;
-                height:80px;
+                width:70px;
+                height:70px;
                 border-radius:40px;
                 border:none;
-                background-color:rgb(170, 170, 250);
+                 background: linear-gradient(0deg, rgba(34,88,66,1) 0%, rgba(73,176,15,1) 48%, rgba(186,255,0,1) 100%);
             }
             @keyframes transition
             {
@@ -109,6 +130,10 @@
                 {
                     opacity:0;
                 }
+            }
+            h1 {
+            padding-left: 30px;
+            padding-right: 30px;
             }
         </style>
     </head>
@@ -146,28 +171,28 @@
             var i = 1;
             var intrebare1 = {
                 numar: 1,
-                text:"In which of these countries can the Amazon rainforest be found?",
-                raspunsuri: ["Argentina", "Brazil", "Chile", "Honduras"]
+                text:"În care din următoarele țări poate fi găsită Pădurea Amazoniană?",
+                raspunsuri: ["Argentina", "Brazilia", "Chile", "Honduras"]
             };
             var intrebare2 = {
                 numar: 2,
-                text:"What is the age of the oldest tree from the Amazon rainforest?",
-                raspunsuri: ["100 years", "250 years", "5000 years", "10000 years"]
+                text:"Care este vârsta celui mai bătrân copac din Pădurea Amazoniană?",
+                raspunsuri: ["100 de ani", "250 de ani", "5000 de ani", "10000 de ani"]
             };
             var intrebare3 = {
                 numar: 3,
-                text:"Which type of tree is the tallest?",
-                raspunsuri: ["The Acacia", "The Sumaumeira", "The Palm", "The Bertholletia"]
+                text:"Care este cel mai înalt tip de copac?",
+                raspunsuri: ["Acacia", "Sumaumeira", "Palmier", "Bertholletia"]
             };
             var intrebare4 = {
                 numar: 4,
-                text:"Which of these Animals can NOT be found in the Amazon rainforest?",
-                raspunsuri: ["Jaguar", "Harpy eagles", "Black spider monkeys", "Burro donkeys"]
+                text:"Care dintre aceste animale NU se poate întâlni în Amazon?",
+                raspunsuri: ["Jaguar", "Vulturi harpie", "Maimuțe păianjen negre", "Măgar Burros"]
             };
             var intrebare5 = {
                 numar: 5,
-                text:"How many trees do you think there are in the Amazon rainforest?",
-                raspunsuri: ["400 billion", "500 billion", "700 billion", "100+ billion"]
+                text:"Câți copaci (cu aproximație) credeți că există în Pădurea Amazoniană?",
+                raspunsuri: ["400 de miliarde", "500 de miliarde", "700 de miliarde", "1000+ de miliarde"]
             };
             var x = 0;
             var number = document.getElementById("number");

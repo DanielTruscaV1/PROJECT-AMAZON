@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="ro">
+        <meta charset="UTF-8">
         <title>
             Home
         </title>
         <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <style>
             body
             {
                 margin:0px;
+                background-image: url('images/image9.png');
+                background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100%;
             }
             header
             {
                 width:100%;
                 height:200px;
-                background-color:rgb(235, 235, 235);
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Rowdies', cursive;
                 margin-top:-20px;
+                color: white;
             }
             #title
             {
                 padding-top:30px;
-                padding-left:30px;
+                padding-left:70px;
+                font-size: 70px;
+                text-shadow: 4px 4px 10px #000000;
+                
             }
             #subtitle
             {
-                padding-top:30px;
-                padding-left:30px;
+			font-size: 25px;
+                padding-left:70px;
+                text-shadow: 4px 4px 10px #000000;
             }
             #theme
             {
@@ -36,7 +48,7 @@
                 border-radius:30px;
                 border:none;
                 cursor:pointer;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Rowdies', cursive;
                 font-size:20px;
                 position:absolute;
                 top:30px;
@@ -46,14 +58,17 @@
             }
             .choice
             {
-                width:33%;
-                height:600px;
+                width:26%;
+                height:40%;
                 display:inline-block;
-                font-family: 'Montserrat', sans-serif;
-                font-size:20px;
+			font-family: 'Rowdies', cursive;
+                font-size:15px;
                 color:white;
+                border-radius: 30px;
+                margin-left: 5%;
+                margin-top: 5%;
             }
-            .choice h3
+            .choice h1
             {
                 text-align:center;
             }
@@ -103,31 +118,31 @@
         <main>
             <a href="facts.html">
                 <section class="choice" id="facts">
-                    <h3>
-                        Facts
-                    </h3>
+                    <h1>
+                        CURIOZITĂȚI
+                    </h1>
                     <p>
-                        Click here if you want to learn more interesting things about the Amazon rainforest.
+                        Apăsați aici dacă doriți să aflați mai multe lucruri interesante despre Pădurea Amazoniană.
                     </p>
                 </section>
             </a>
             <a href="quiz.html">
             <section class="choice" id="quiz">
-                <h3>
-                    Quiz
-                </h3>
+                <h1>
+                    ÎNTREBĂRI
+                </h1>
                 <p>
-                    Click here if you want to test you knowledge with a challenging quiz about the Amazon rainforest.
+                    Apăsați aici dacă doriți să vă testați cunoștințele acumulate printr-un test iteractiv.
                 </p>
             </section>
             </a>
             <a href="map.html">
                 <section class="choice" id="map">
-                    <h3>
-                        Map
-                    </h3>
+                    <h1>
+                        HARTĂ
+                    </h1>
                     <p>
-                        Click here if you want to see a complete and interactive map of the Amazon rainforest along with a 3D animation.
+                        Apăsați aici dacă doriți să vedeți o hartă completă a Pădurii Amazoniene, alături de o animație 3D. 
                     </p>
                 </section>
             </a>
@@ -135,8 +150,8 @@
         <script>
             var i = 0;
             var j = 0;
-            var text1 = "The Amazon rainforest";
-            var text2 = "Here you can find the most interesting facts about the Amazon rainforest along with a general quiz and even an interactive map";
+            var text1 = "PĂDUREA AMAZONIANĂ";
+            var text2 = "Proiect web realizat de elevii: Trușcă Daniel, Docheru Andrei și Bivolaru Marilena";
             var speed = 50;
 
             function typeAnimation()

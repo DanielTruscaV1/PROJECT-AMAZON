@@ -4,6 +4,7 @@
         <title>
             Facts
         </title>
+                <meta charset="UTF-8">
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <style>
@@ -11,46 +12,54 @@
             {
                 margin:0px;
                 font-family: 'Montserrat', sans-serif;
-                padding:30px;
+                padding:50px;
+                background-image: url('images/image10.jpg');
+                background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-color: black;
+
             }
             section
             {
-                width:40%;
-                height:600px;;
+                width:450px;
+                height:550px;;
                 display:inline-block;
-                border:3px solid black;
-                padding:30px;
-                box-shadow:10px 10px 10px black;
+                padding:20px;
                 position:absolute;
                 margin-top:30px;
-                margin-left:30px;
+                margin-left:70px;
                 margin-bottom:10px;
+                background-image: url('images/papers.jpg');
+                background-repeat: no-repeat;
+			background-size: cover;
+
             }
             h1
             {
-                width:90%;
+                width:98%;
                 height:50px;
             }
             p
             {
-                width:90%;
+                width:98%;
                 height:200px;
                 text-align:justify;
             }
             img
             {
-                width:600px;
-                height:300px;
+                width:450px;
+                height:250px;
             }
             #section1
             {
-                top:100px;
+                top:80px;
                 left:0px;
             }
             #section2
             {
-                top:100px;
-                left:750px;
+                top:80px;
+                left:600px;
             }
             #section3
             {
@@ -60,7 +69,7 @@
             #section4
             {
                 top:800px;
-                left:750px;
+                left:600px;
             }
             #section5
             {
@@ -70,74 +79,78 @@
             #section6
             {
                 top:1500px;
-                left:750px;
+                left:600px;
             }
-        </style>
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+     		::-webkit-scrollbar-track {
+     		background: black;
+				}
+		::-webkit-scrollbar-thumb {
+  		background: linear-gradient(0deg, rgba(34,88,66,1) 0%, rgba(73,176,15,1) 48%, rgba(186,255,0,1) 100%);
+		border-radius: 5px;
+		}        </style>
     </head>
     <body>
+       <div id="progressbar"></div>
+       <div id="scrollPath"></div>
         <section id="section1">
             <h1>
-                How many trees are in the Amazon?
+                Câți copaci sunt în Amazon?
             </h1>
             <p>
-                As you’ll see on all Amazon tours in Brazil, if there’s one thing that the Amazon is not lacking, its trees. Though counting each and every tree in the jungle is impossible, scientists have undertaken several studies and surveys to determine the approximate number of trees, placing the number at a huge 400 billion.
-
-In fact, around a third of the world’s tree species can be found in the Amazon, though more and more are being lost each day due to deforestation and illegal logging.
-            </p>
+                După cum veți vedea în toate tururile Amazonului din Brazilia, dacă există un lucru care nu lipsește Amazonului, aceia sunt copacii. Deși numărarea fiecărui copac din junglă este imposibilă, oamenii de știință au întreprins mai multe studii și anchete pentru a determina numărul aproximativ de copaci, rezultând în aprx. 400 de miliarde. De fapt, o treime din speciile de copaci din lume se găsesc în Amazon, deși din ce în ce mai multe se pierd în fiecare zi din cauza defrișărilor și tăierilor ilegale.
+                </p>
             <img src="./images/image1.jfif"/>
         </section>
         <section id="section2">
             <h1>
-                Which is the tallest tree in the Amazon?
+                Care este cel mai înalt copac din Amazon?
             </h1>
             <p>
-                The tallest tree in the Amazon is the Sumaumeira. A species of the Kapok tree, the Sumaumeira can grow to heights of 200 feet and diameters of more than ten feet, towering above their neighbours high up in the jungle canopy.
-
-                Found on the floodplains of jungle rivers, this fast growing tree is easy to spot on Amazon tours in Brazil thanks to the distinctive above ground roots that protect the tree from flood waters during the wet season.
-
-                Though the Sumaumeira is the tallest, there are hundreds of other enormous trees in the Amazon, each towering hundreds of feet above the jungle floor.
-            </p>
+                Cel mai înalt copac din Amazon este Sumaumeira. O specie a copacului Kapok, Sumaumeira poate crește până la înălțimi de 200m și diametre de peste 3m. Găsit pe câmpiile inundabile ale râurilor junglei, acest copac cu creștere rapidă este ușor de observat în tururile Amazonului datorită rădăcinilor aflate deasupra solului care protejează copacul de apele inundațiilor în timpul sezonului umed. Deși Sumaumeira este cel mai înalt, există sute de alți copaci uriași în Amazon, fiecare falnic la sute de metri deasupra podelei junglei. </p>
             <img src="./images/image4.jpg"/>
         </section>
         <br/>
         <section id="section3">
             <h1>
-                What plants are in the rainforest?
+                Ce plante sunt în pădurea tropicală?
             </h1>
             <p>
-                Heliconia Flower (Lobster-Claw) Rubber Tree (Hevea brasiliensis) Orchids. Cacao (Theobroma cacao) Huge Water Lilies (Victoria amazonica) Passion Fruit Blossom (Passiflora) Bromeliads (Bromeliaceae) Monkey Brush Vine (Combretum rotundifolium).
-            </p>
+               Floare Heliconia (Gheara de homar) Arborele de cauciuc (Hevea brasiliensis) Orhidee. Cacao (Theobroma cacao) Nuferi uriași (Victoria amazonica) Floare de fructul pasiunii (Passiflora) Bromeliade (Bromeliaceae) Viță de vie de perie de maimuță (Combretum rotundifolium).</p>
             <img src="./images/image6.webp"/>
         </section>
         <section id="section4">
             <h1>
-                How quickly is the Amazon Rainforest in Brazil being deforested?
-            </h1>
+                Cât de repede este defrișată Pădurea Amazoniană din Brazilia?            </h1>
             <p>
-                Brazilians have settled large portions of the Amazon, clearing the land for lumbering, grazing, and agriculture. Between 1970 and 2016, Brazilian Amazon forest cover declined from some 1,583,000 square miles to about 1,283,000 square miles. However, conservation slowed forest loss to roughly 0.1–0.2 percent per year between 2008 and 2016.
-            </p>
+                Brazilienii au distrus porțiuni mari din Amazon, defrișând pământul pentru exploatarea lemnului, pășunat și agricultură. Între 1970 și 2016, întinderea pădurii braziliene din Amazon a scăzut de la aproximativ 1.583.000 de km pătrați la aproximativ 1.283.000 de km pătrați. Cu toate acestea, conservarea a încetinit pierderea pădurilor la aproximativ 0,1–0,2% pe an între 2008 și 2016. </p>
             <img src="./images/image3.jpg"/>
         </section>
         <section id="section5">
             <h1>
-                What is the maximum age of a tree?
+                Care este vârsta maximă a unui copac?
             </h1>
             <p>
-                The Sarv-e Abarkuh (Abarkuh Cypress) is thought to be among the earliest trees in the world as its age is approximated to be in between 4,000– 5,000 years. It is tough to position a specific age on the tree, yet it has actually been cultivated for several years.
-            </p>
+                Se crede că Sarv-e Abarkuh (Chiparosul Abarkuh) este printre cei mai vechi copaci din lume, deoarece vârsta sa este aproximativă între 4.000 și 5.000 de ani. Este greu să se poziționezi o anumită vârstă pentru copac, deși a fost cultivat de câțiva ani.</p>
             <img src="./images/image7.webp"/>
         </section>
         <section id="section6">
             <h1>
-                How old is an average tree?
+                Cât de bătrân este în medie un copac?
             </h1>
             <p>
-                The typical age of a tree depends of the varieties. Palms which are brief lived can live upto 40– 50 years of age. The willow can live upto 75 years.
-            </p>
+               Vârsta normală a unui copac depinde de soiuri. Palmierii care au o viață scurtă pot trăi până la 40-50 de ani. Salcia poate trăi până la 75 de ani. </p>
             <img src="./images/image8.jpg"/>
         </section>
-        <script>
-            
+        <script type="text/javascript">
+            Let progress = document.getElementById('progressbar');
+            Let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function() {
+            Let progressHeight = (window.pageYOffset / totalHeight) *100;
+            progress.style.height = progressHeight + "%";
+            }
         </script>
     </body>
 </html>
