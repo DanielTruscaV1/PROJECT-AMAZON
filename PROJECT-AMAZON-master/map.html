@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Map
+        </title>
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                margin:0px;
+                background-color:rgb(30, 30, 30);
+            }
+            #map
+            {
+                position:absolute;
+                top:20%;
+                left:25%;
+                border:7px solid white;
+                border-radius:20px;
+            }
+            h1
+            {
+                font-family: 'Montserrat', sans-serif;
+                color:white;
+                text-align:center;
+            }
+            #information1
+            {
+                font-family: 'Montserrat', sans-serif;
+                color:white;
+                width:200px;
+                text-align:justify;
+                border:3px solid white;
+                border-radius:20px;
+                padding:20px;
+                position:absolute;
+                top:150px;
+                left:50px;
+            }
+            #information2
+            {
+                font-family: 'Montserrat', sans-serif;
+                color:white;
+                width:200px;
+                text-align:justify;
+                border:3px solid white;
+                border-radius:20px;
+                padding:20px;
+                position:absolute;
+                top:150px;
+                right:50px;
+            }
+            #information3
+            {
+                font-family: 'Montserrat', sans-serif;
+                color:white;
+                width:200px;
+                text-align:justify;
+                border:3px solid white;
+                border-radius:20px;
+                padding:20px;
+                position:absolute;
+                top:350px;
+                left:50px;
+            }
+            #information4
+            {
+                font-family: 'Montserrat', sans-serif;
+                color:white;
+                width:200px;
+                text-align:justify;
+                border:3px solid white;
+                border-radius:20px;
+                padding:20px;
+                position:absolute;
+                top:350px;
+                right:50px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    </head>
+    <body>
+        <h1>
+            The current weather in the Amazon rainforest is as follows:
+        </h1>
+        <div id="map" style="width:50%; height:60%;"></div>
+        <p id="information1">
+
+        </p>
+        <p id="information2">
+
+        </p>
+        <p id="information3">
+
+        </p>
+        <p id="information4">
+
+        </p>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+        <script>
+            // First, create the map object and set the view to the center of the Amazon rainforest
+            var map = L.map('map').setView([-3.0, -60.0], 5);
+
+            // Next, add a base layer to the map using the OpenStreetMap tile provider
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+            }).addTo(map);
+
+            // Finally, add a marker to the center of the Amazon rainforest
+            var marker = L.marker([-3.0, -60.0]).addTo(map);
+            marker.bindPopup("<b>Amazon Rainforest</b><br>The largest tropical rainforest in the world.").openPopup();
+            
+            const API_KEY = "ede3e5e2ec5014a2ef2cdf5e18426b92";
+            const LOCATION1 = "Manaus";
+            const LOCATION2 = "Palmas";
+            const LOCATION3 = "Iquitos";
+            const LOCATION4 = "Boa Vista"
+
+            const url1 = `http://api.openweathermap.org/data/2.5/weather?q=${LOCATION1}&appid=${API_KEY}`;
+            const url2 = `http://api.openweathermap.org/data/2.5/weather?q=${LOCATION2}&appid=${API_KEY}`;
+            const url3 = `http://api.openweathermap.org/data/2.5/weather?q=${LOCATION3}&appid=${API_KEY}`;
+            const url4 = `http://api.openweathermap.org/data/2.5/weather?q=${LOCATION4}&appid=${API_KEY}`;
+
+            fetch(url1)
+            .then(response => response.json())
+            .then(data => {
+                // Extract data from the response
+                const temperature = data.main.temp;
+                const humidity = data.main.humidity;
+                const weather = data.weather[0].main;
+                document.getElementById("information1").innerHTML = `The current weather in ${LOCATION1} is ${weather} with a temperature of ${temperature} degrees and a humidity of ${humidity}%.`;
+            })
+            .catch(error => console.error(error));
+
+            fetch(url2)
+            .then(response => response.json())
+            .then(data => {
+                // Extract data from the response
+                const temperature = data.main.temp;
+                const humidity = data.main.humidity;
+                const weather = data.weather[0].main;
+                document.getElementById("information2").innerHTML = `The current weather in ${LOCATION2} is ${weather} with a temperature of ${temperature} degrees and a humidity of ${humidity}%.`;
+            })
+            .catch(error => console.error(error));
+
+            fetch(url3)
+            .then(response => response.json())
+            .then(data => {
+                // Extract data from the response
+                const temperature = data.main.temp;
+                const humidity = data.main.humidity;
+                const weather = data.weather[0].main;
+                document.getElementById("information3").innerHTML = `The current weather in ${LOCATION3} is ${weather} with a temperature of ${temperature} degrees and a humidity of ${humidity}%.`;
+            })
+            .catch(error => console.error(error));
+
+            fetch(url4)
+            .then(response => response.json())
+            .then(data => {
+                // Extract data from the response
+                const temperature = data.main.temp;
+                const humidity = data.main.humidity;
+                const weather = data.weather[0].main;
+                document.getElementById("information4").innerHTML = `The current weather in ${LOCATION4} is ${weather} with a temperature of ${temperature} degrees and a humidity of ${humidity}%.`;
+            })
+            .catch(error => console.error(error)); 
+        </script>
+    </body>
+</html>

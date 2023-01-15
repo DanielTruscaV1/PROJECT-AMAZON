@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Facts
+        </title>
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                margin:0px;
+                font-family: 'Montserrat', sans-serif;
+                padding:50px;
+                background-image: url('images/image10.jpg');
+                background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-color: black;
+
+            }
+            section
+            {
+                width:450px;
+                height:550px;;
+                display:inline-block;
+                padding:20px;
+                position:absolute;
+                margin-top:30px;
+                margin-left:70px;
+                margin-bottom:10px;
+                background-image: url('images/papers.jpg');
+                background-repeat: no-repeat;
+			background-size: cover;
+
+            }
+            h1
+            {
+                width:98%;
+                height:50px;
+            }
+            p
+            {
+                width:98%;
+                height:200px;
+                text-align:justify;
+            }
+            img
+            {
+                width:450px;
+                height:250px;
+            }
+            #section1
+            {
+                top:80px;
+                left:0px;
+            }
+            #section2
+            {
+                top:80px;
+                left:600px;
+            }
+            #section3
+            {
+                top:800px;
+                left:0px;
+            }
+            #section4
+            {
+                top:800px;
+                left:600px;
+            }
+            #section5
+            {
+                top:1500px;
+                left:0px;
+            }
+            #section6
+            {
+                top:1500px;
+                left:600px;
+            }
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+     		::-webkit-scrollbar-track {
+     		background: black;
+				}
+		::-webkit-scrollbar-thumb {
+  		background: linear-gradient(0deg, rgba(34,88,66,1) 0%, rgba(73,176,15,1) 48%, rgba(186,255,0,1) 100%);
+		border-radius: 5px;
+		}        </style>
+    </head>
+    <body>
+       <div id="progressbar"></div>
+       <div id="scrollPath"></div>
+        <section id="section1">
+            <h1>
+                Câți copaci sunt în Amazon?
+            </h1>
+            <p>
+                După cum veți vedea în toate tururile Amazonului din Brazilia, dacă există un lucru care nu lipsește Amazonului, aceia sunt copacii. Deși numărarea fiecărui copac din junglă este imposibilă, oamenii de știință au întreprins mai multe studii și anchete pentru a determina numărul aproximativ de copaci, rezultând în aprx. 400 de miliarde. De fapt, o treime din speciile de copaci din lume se găsesc în Amazon, deși din ce în ce mai multe se pierd în fiecare zi din cauza defrișărilor și tăierilor ilegale.
+                </p>
+            <img src="./images/image1.jfif"/>
+        </section>
+        <section id="section2">
+            <h1>
+                Care este cel mai înalt copac din Amazon?
+            </h1>
+            <p>
+                Cel mai înalt copac din Amazon este Sumaumeira. O specie a copacului Kapok, Sumaumeira poate crește până la înălțimi de 200m și diametre de peste 3m. Găsit pe câmpiile inundabile ale râurilor junglei, acest copac cu creștere rapidă este ușor de observat în tururile Amazonului datorită rădăcinilor aflate deasupra solului care protejează copacul de apele inundațiilor în timpul sezonului umed. Deși Sumaumeira este cel mai înalt, există sute de alți copaci uriași în Amazon, fiecare falnic la sute de metri deasupra podelei junglei. </p>
+            <img src="./images/image4.jpg"/>
+        </section>
+        <br/>
+        <section id="section3">
+            <h1>
+                Ce plante sunt în pădurea tropicală?
+            </h1>
+            <p>
+               Floare Heliconia (Gheara de homar) Arborele de cauciuc (Hevea brasiliensis) Orhidee. Cacao (Theobroma cacao) Nuferi uriași (Victoria amazonica) Floare de fructul pasiunii (Passiflora) Bromeliade (Bromeliaceae) Viță de vie de perie de maimuță (Combretum rotundifolium).</p>
+            <img src="./images/image6.webp"/>
+        </section>
+        <section id="section4">
+            <h1>
+                Cât de repede este defrișată Pădurea Amazoniană din Brazilia?            </h1>
+            <p>
+                Brazilienii au distrus porțiuni mari din Amazon, defrișând pământul pentru exploatarea lemnului, pășunat și agricultură. Între 1970 și 2016, întinderea pădurii braziliene din Amazon a scăzut de la aproximativ 1.583.000 de km pătrați la aproximativ 1.283.000 de km pătrați. Cu toate acestea, conservarea a încetinit pierderea pădurilor la aproximativ 0,1–0,2% pe an între 2008 și 2016. </p>
+            <img src="./images/image3.jpg"/>
+        </section>
+        <section id="section5">
+            <h1>
+                Care este vârsta maximă a unui copac?
+            </h1>
+            <p>
+                Se crede că Sarv-e Abarkuh (Chiparosul Abarkuh) este printre cei mai vechi copaci din lume, deoarece vârsta sa este aproximativă între 4.000 și 5.000 de ani. Este greu să se poziționezi o anumită vârstă pentru copac, deși a fost cultivat de câțiva ani.</p>
+            <img src="./images/image7.webp"/>
+        </section>
+        <section id="section6">
+            <h1>
+                Cât de bătrân este în medie un copac?
+            </h1>
+            <p>
+               Vârsta normală a unui copac depinde de soiuri. Palmierii care au o viață scurtă pot trăi până la 40-50 de ani. Salcia poate trăi până la 75 de ani. </p>
+            <img src="./images/image8.jpg"/>
+        </section>
+        <script type="text/javascript">
+            Let progress = document.getElementById('progressbar');
+            Let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function() {
+            Let progressHeight = (window.pageYOffset / totalHeight) *100;
+            progress.style.height = progressHeight + "%";
+            }
+        </script>
+    </body>
+</html>
