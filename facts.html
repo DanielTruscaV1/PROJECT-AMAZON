@@ -90,7 +90,15 @@
 		::-webkit-scrollbar-thumb {
   		background: linear-gradient(0deg, rgba(34,88,66,1) 0%, rgba(73,176,15,1) 48%, rgba(186,255,0,1) 100%);
 		border-radius: 5px;
-		}        </style>
+		} 
+        #sounds
+        {
+            position: absolute;
+            top: 25px;
+            left: 70px;
+            opacity: 10%;
+        }   
+       </style>
     </head>
     <body>
        <div id="progressbar"></div>
@@ -144,6 +152,11 @@
                Vârsta normală a unui copac depinde de soiuri. Palmierii care au o viață scurtă pot trăi până la 40-50 de ani. Salcia poate trăi până la 75 de ani. </p>
             <img src="./images/image8.jpg"/>
         </section>
+
+        <audio id ="sounds" controls loop>
+            <source src="./sounds/rainforest-sound.mp3" type="audio/mp3">
+        </audio>
+
         <script type="text/javascript">
             Let progress = document.getElementById('progressbar');
             Let totalHeight = document.body.scrollHeight - window.innerHeight;

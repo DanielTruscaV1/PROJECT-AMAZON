@@ -135,6 +135,13 @@
             padding-left: 30px;
             padding-right: 30px;
             }
+            #sounds
+            {
+                position: absolute;
+                top: 25px;
+                left: 65px;
+                opacity: 10%;
+            }
         </style>
     </head>
     <body>
@@ -148,6 +155,10 @@
             <h1 id="intrebare">
 
             </h1>
+
+            <h3 id = "Q1">
+                
+            </h3>
         </section>
         <button class="choicea" id="choicea" onclick="checka()">
 
@@ -167,6 +178,11 @@
         <button class="next" onclick="next()">
             &#8594;
         </button>
+
+        <audio id ="sounds" controls loop>
+            <source src="./sounds/rainforest-sound.mp3" type="audio/mp3">
+        </audio>
+
         <script>
             var i = 1;
             var intrebare1 = {
@@ -563,8 +579,72 @@
                 else if (i == 5)
                 {
                     i = 6;
+                    var que = document.getElementById("question1");
+                    
+                    var queA = document.getElementById("Q1");
+                    
+                    var que1 = document.getElementById("choicea");
+                    var que2 = document.getElementById("choiceb");
+                    var que3 = document.getElementById("choicec");
+                    var que4 = document.getElementById("choiced");
+                    que.style.height = "250px";
+                    Q1.style.textAlign = "center";
+                    Q1.style.fontFamily = "Montserrat, sans-serif";
+                    Q1.style.fontSize = "20px";
+
+                    que1.style.top = "350px";
+                    que2.style.top = "420px";
+                    que3.style.top = "490px";
+                    que4.style.top = "560px";
                     intrebare.innerHTML = "Congratulations !" +  "<br />" +  "You scored: " + goodAns + "/5 !" + "<br />" + "Here is a better overview of your answers: " +  "<br />";
-                    console.log(goodAns + " " + questionW1 + " " + questionW2 + " " + questionW3 + " " + questionW4 + " " + questionW5);
+
+                    var z = ["A", "B", "C", "D"];
+
+                    
+                    if (questionW1 == 0)
+                    {
+                        Q1.innerHTML = "Question 1: Correct Answer";
+                    }
+                    else
+                    {
+                        Q1.innerHTML = "Question 1: You chose " + z[questionW1 - 1] + " instead of B";
+                    }
+
+                    if (questionW2 == 0)
+                    {
+                        choicea.innerHTML = "Question 2: Correct Answer";
+                    }
+                    else
+                    {
+                        choicea.innerHTML = "Question 2: You chose " + z[questionW2 - 1] + " instead of C";
+                    }
+
+                    if (questionW3 == 0)
+                    {
+                        choiceb.innerHTML = "Question 3: Correct Answer";
+                    }
+                    else
+                    {
+                        choiceb.innerHTML = "Question 3: You chose " + z[questionW3 - 1] + " instead of B";
+                    }
+
+                    if (questionW4 == 0)
+                    {
+                        choicec.innerHTML = "Question 4: Correct Answer";
+                    }
+                    else
+                    {
+                        choicec.innerHTML = "Question 4: You chose " + z[questionW4 - 1] + " instead of D";
+                    }
+
+                    if (questionW5 == 0)
+                    {
+                        choiced.innerHTML = "Question 5: Correct Answer";
+                    }
+                    else
+                    {
+                        choiced.innerHTML = "Question 5: You chose " + z[questionW5 - 1] + " instead of A";
+                    }
                 }
             }
 
