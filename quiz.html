@@ -217,7 +217,7 @@
             var raspunsB = document.getElementById("choiceb");
             var raspunsC = document.getElementById("choicec");
             var raspunsD = document.getElementById("choiced");
-            number.innerHTML = "Question " + intrebare1.numar;
+            number.innerHTML = "Intrebarea " + intrebare1.numar;
             intrebare.innerHTML = intrebare1.text;
             raspunsA.innerHTML = intrebare1.raspunsuri[0];
             raspunsB.innerHTML = intrebare1.raspunsuri[1];
@@ -237,7 +237,7 @@
                 if(i == 2)
                 {
                     i = 1;
-                    number.innerHTML = "Question " + intrebare1.numar;
+                    number.innerHTML = "Intrebarea " + intrebare1.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -278,7 +278,7 @@
                 else if(i == 3)
                 {
                     i = 2;
-                    number.innerHTML = "Question " + intrebare2.numar;
+                    number.innerHTML = "Intrebarea " + intrebare2.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -319,7 +319,7 @@
                 else if(i == 4)
                 {
                     i = 3;
-                    number.innerHTML = "Question " + intrebare3.numar;
+                    number.innerHTML = "Intrebarea " + intrebare3.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -360,7 +360,7 @@
                 else if(i == 5)
                 {
                     i = 4;
-                    number.innerHTML = "Question " + intrebare4.numar;
+                    number.innerHTML = "Intrebarea " + intrebare4.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -456,7 +456,7 @@
                 else if(i == 2)
                 {
                     i = 3;
-                    number.innerHTML = "Question " + intrebare3.numar;
+                    number.innerHTML = "Intrebarea " + intrebare3.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -497,7 +497,7 @@
                 else if(i == 3)
                 {
                     i = 4;
-                    number.innerHTML = "Question " + intrebare4.numar;
+                    number.innerHTML = "Intrebarea " + intrebare4.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -538,7 +538,7 @@
                 else if(i == 4)
                 {
                     i = 5;
-                    number.innerHTML = "Question " + intrebare5.numar;
+                    number.innerHTML = "Intrebarea " + intrebare5.numar;
                     var x = 10;
                     var phase1 = true;
                     var k = window.setInterval(function() {
@@ -596,54 +596,54 @@
                     que2.style.top = "420px";
                     que3.style.top = "490px";
                     que4.style.top = "560px";
-                    intrebare.innerHTML = "Congratulations !" +  "<br />" +  "You scored: " + goodAns + "/5 !" + "<br />" + "Here is a better overview of your answers: " +  "<br />";
+                    intrebare.innerHTML = "Felicitari !" +  "<br />" +  "Ai obtinut: " + goodAns + "/5 !" + "<br />" + "Aici poti vedea un rezumat: " +  "<br />";
 
                     var z = ["A", "B", "C", "D"];
 
                     
                     if (questionW1 == 0)
                     {
-                        Q1.innerHTML = "Question 1: Correct Answer";
+                        Q1.innerHTML = "Intrebarea 1: Corect";
                     }
                     else
                     {
-                        Q1.innerHTML = "Question 1: You chose " + z[questionW1 - 1] + " instead of B";
+                        Q1.innerHTML = "Intrebarea 1: ai ales " + z[questionW1 - 1] + " in loc de B";
                     }
 
                     if (questionW2 == 0)
                     {
-                        choicea.innerHTML = "Question 2: Correct Answer";
+                        choicea.innerHTML = "Intreabrea 2: Corect";
                     }
                     else
                     {
-                        choicea.innerHTML = "Question 2: You chose " + z[questionW2 - 1] + " instead of C";
+                        choicea.innerHTML = "Intrebarea 2: Ai ales " + z[questionW2 - 1] + " in loc de C";
                     }
 
                     if (questionW3 == 0)
                     {
-                        choiceb.innerHTML = "Question 3: Correct Answer";
+                        choiceb.innerHTML = "Intrebarea 3: Corect";
                     }
                     else
                     {
-                        choiceb.innerHTML = "Question 3: You chose " + z[questionW3 - 1] + " instead of B";
+                        choiceb.innerHTML = "Intrebarea 3: Ai ales " + z[questionW3 - 1] + " in loc de B";
                     }
 
                     if (questionW4 == 0)
                     {
-                        choicec.innerHTML = "Question 4: Correct Answer";
+                        choicec.innerHTML = "Intrebarea 4: Corect";
                     }
                     else
                     {
-                        choicec.innerHTML = "Question 4: You chose " + z[questionW4 - 1] + " instead of D";
+                        choicec.innerHTML = "Intrebarea 4: Ai ales " + z[questionW4 - 1] + " in loc de D";
                     }
 
                     if (questionW5 == 0)
                     {
-                        choiced.innerHTML = "Question 5: Correct Answer";
+                        choiced.innerHTML = "Intrebarea 5: Corect";
                     }
                     else
                     {
-                        choiced.innerHTML = "Question 5: You chose " + z[questionW5 - 1] + " instead of A";
+                        choiced.innerHTML = "Intrebarea 5: Ai ales " + z[questionW5 - 1] + " in loc de A";
                     }
                 }
             }
